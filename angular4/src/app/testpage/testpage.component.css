@@ -1,0 +1,35 @@
+.drivers img{
+    height: 500px !important;
+    width: 100% !important;
+    object-fit: cover;
+    object-position: top;
+    
+}
+.drivers{
+    height: 870px !important;
+}
+p:hover{
+    cursor: pointer;
+}
+
+.fail{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(75, 55, 55, 0.568);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.fail p{
+    font-size: 30px;
+    font-weight: bold;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 9px;
+    
+    
+}

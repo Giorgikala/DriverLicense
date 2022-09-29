@@ -1,0 +1,11 @@
+.nav{
+    background-color: blue !important;
+}
+.nav-item a{
+    color: white !important;
+}
+.nav-item a:hover{
+    background-color: pink !important;
+
+
+}

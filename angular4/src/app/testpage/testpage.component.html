@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <div class="row drivers p-3 bg-light rounded shadow">
+                <div class="col-md-12">
+                    <img [src]="Questions.img"  alt="">
+                    <h5 class="p-3 bg-dark text-white text-center">{{Questions.question}}</h5>
+                </div>
+                <div class="col-md-6 text-center" *ngFor="let answer of Questions.answers; let i = index">
+                    <p (click)="checkAnswer($event)" class="p-3 bg-white mt-4 shadow rounded" [class]="i == Questions.corrAnswer ? 'correct': '' ">{{answer}}</p>
+                </div>
+                <div class="col-md-6 d-block">
+                    <span class="text-white p-3 rounded bg-success shadow">სწორი{{correctAnswers}}</span>
+                    <span class="text-white p-3 rounded bg-danger shadow">არასწორი{{wrongAnswers}}</span>
+
+
+                </div>
+            </div>
+            <div class="col-md-12">
+                <button class="btn btn-succes text-black p-3 rounded bg-success d-block mx-auto"(click)=next() [disabled]="isNext">შემდეგი</button>
+            </div>
+        </div>
+
+        <div class="fail">
+            <p>სამწუხაროდ თქვენ ჩაიჭერით</p>
+            <button class="btn btn-success p-3 shadow" (click)="reload()">სცადეთ თავიდან</button>
+        </div>
+    </div>
+</div>
